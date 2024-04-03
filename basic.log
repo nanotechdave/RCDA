@@ -1,0 +1,30 @@
+2024-04-03 13:58:42 DEBUG this is a debug message
+2024-04-03 13:58:42 INFO now we are printing info
+2024-04-03 13:59:27 DEBUG this is a debug message
+2024-04-03 13:59:27 INFO now we are printing info
+2024-04-03 13:59:32 DEBUG this is a debug message
+2024-04-03 13:59:32 INFO now we are printing info
+2024-04-03 13:59:36 DEBUG this is a debug message
+2024-04-03 13:59:36 INFO now we are printing info
+2024-04-03 13:59:36 DEBUG this is a debug message
+2024-04-03 13:59:36 INFO now we are printing info
+2024-04-03 14:00:07 DEBUG this is a debug message
+2024-04-03 14:00:07 INFO now we are printing info
+2024-04-03 14:00:07 CRITICAL critical message
+2024-04-03 14:00:07 ERROR this is an error
+2024-04-03 14:00:07 WARNING this is a warning
+2024-04-03 17:17:39 DEBUG this is a debug message
+2024-04-03 17:17:39 INFO now we are printing info
+2024-04-03 17:17:39 WARNING this is a warning
+2024-04-03 17:17:39 ERROR this is an error
+2024-04-03 17:17:39 CRITICAL critical message
+2024-04-03 17:31:30 DEBUG this is a debug message
+2024-04-03 17:31:30 INFO now we are printing info
+2024-04-03 17:31:30 WARNING this is a warning
+2024-04-03 17:31:30 ERROR this is an error
+2024-04-03 17:31:30 CRITICAL critical message
+2024-04-03 17:37:33 DEBUG this is a debug message
+2024-04-03 17:37:33 INFO now we are printing info
+2024-04-03 17:37:33 WARNING this is a warning
+2024-04-03 17:37:33 ERROR this is an error
+2024-04-03 17:37:33 CRITICAL critical message
