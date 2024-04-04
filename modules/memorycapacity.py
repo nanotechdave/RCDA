@@ -1,6 +1,6 @@
 import itertools
 import random
-
+from utils import find_specific_txt_files
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -46,17 +46,13 @@ def calculate_memory_capacity(estimated_waveforms: list[np.array], target_wavefo
     assert len(estimated_waveforms) == len(
         target_waveforms
     ), "Input waveforms must be the same length"
-    lwav = len(estimated_waveforms)
-    print(f"len of estimated waveform is {lwav}")
     MC_values = []
     MemC = 0
     for estimated_waveform, target_waveform in zip(
         estimated_waveforms, target_waveforms
     ):
-        print(estimated_waveform)
         # Calculate the covariance and variances
         covariance = np.cov(estimated_waveform, target_waveform)[0, 1]
-        print(f"covariance is {covariance}")
         variance_estimate = np.var(estimated_waveform)
         variance_target = np.var(target_waveform)
 
@@ -141,3 +137,14 @@ def calculate_mc_from_file(path:str, mode: str = "linear") -> float:
         """n_MC.append(MC)
         MC_vec.append(MemC)"""
     return MC
+
+def folder_analysis_MC(path: str):
+    
+    filenames = find_specific_txt_files(path)
+    MC_vec = []
+    for filename in filenames:        
+        MC_vec.append(np.round(calculate_mc_from_file(filename),2))
+    return MC_vec
+
+path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad125M"
+print(folder_analysis_MC(path))

@@ -12,6 +12,8 @@ def main():
     logging.warning("this is a warning")
     logging.error("this is an error")
     logging.critical("critical message")
+
+    
     return
 
 
