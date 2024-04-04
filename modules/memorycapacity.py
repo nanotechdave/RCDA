@@ -11,41 +11,21 @@ from sklearn.model_selection import train_test_split
 
 def train_test_split_time_series(data: np.array, target: np.array, test_size=0.2):
     """ Splits data and target into training and test set."""
-
     split_index = int(len(data) * (1 - test_size))
-
     data_train = data[:split_index, :]
     data_test = data[split_index:, :]
-
     target_train = target[:split_index]
     target_test = target[split_index:]
-
     return data_train, data_test, target_train, target_test
 
-
-def kDelayAccuracy(input: np.array, k_delay: int, states: np.array):
-    # Assumption: first 100 points of input are CUT and serve as a buffer
-
+def linear_regression_predict(states_train: np.array, states_test:np.array, target_train: np.array) -> np.array:
+    """ Performs linear regression using the states to match the target.
+     Returnsm the predicted waveform"""
     lr = LinearRegression()
-
-    states_train, states_test, target_train, target_test = train_test_split_time_series(
-        states,
-        input,
-        test_size=0.2,
-    )
-
-    # Fit the model to your data
     lr.fit(states_train, target_train)
+    return lr.predict(states_test)
 
-    # Now you can predict using the linear model:
-    prediction_test = lr.predict(states_test)
-    r2 = r2_score(target_test, prediction_test)
-    mae = mean_absolute_error(target_test, prediction_test)
-    mse = mean_squared_error(target_test, prediction_test)
-    return mse, target_test, prediction_test
-
-
-def calculate_memory_capacity(estimated_waveforms, target_waveforms):
+def calculate_memory_capacity(estimated_waveforms: list[np.array], target_waveforms: list[np.array]) -> float:
     """
     Calculate the memory capacity of a system given the estimated and target waveforms for each delay.
 
@@ -59,64 +39,44 @@ def calculate_memory_capacity(estimated_waveforms, target_waveforms):
     assert len(estimated_waveforms) == len(
         target_waveforms
     ), "Input waveforms must be the same length"
-
+    lwav = len(estimated_waveforms)
+    print(f"len of estimated waveform is {lwav}")
+    MC_values = []
     MemC = 0
     for estimated_waveform, target_waveform in zip(
         estimated_waveforms, target_waveforms
     ):
+        print(estimated_waveform)
         # Calculate the covariance and variances
         covariance = np.cov(estimated_waveform, target_waveform)[0, 1]
+        print(f"covariance is {covariance}")
         variance_estimate = np.var(estimated_waveform)
         variance_target = np.var(target_waveform)
 
         # Calculate the MC for this delay
-        MC_k = covariance**2 / (variance_estimate * variance_target)
-
+        if variance_target == 0 and variance_estimate == 0:
+            MC_k = 1
+        else:
+            MC_k = covariance**2 / (variance_estimate * variance_target)
+        MC_values.append(MC_k)
         # Add to the total MC
         MemC += MC_k
 
-    return MemC
+    return MemC, MC_values
 
 #### REMOVE CALCULATING MC HERE, THERE IS A FUNCTION THAT DOES THIS ABOVE ###
-def generate_forgetting_curve(estimated_waveforms, target_waveforms):
-    """
-    Generate the forgetting curve of a system given the estimated and target waveforms for each delay.
-
-    Parameters:
-    estimated_waveforms (list of np.array): The estimated waveforms from the system for each delay.
-    target_waveforms (list of np.array): The target waveforms for each delay.
-    """
-    assert len(estimated_waveforms) == len(
-        target_waveforms
-    ), "Input waveforms must be the same length"
-
-    MC_values = []
-    for estimated_waveform, target_waveform in zip(
-        estimated_waveforms, target_waveforms
-    ):
-        # Calculate the covariance and variances
-        covariance = np.cov(target_waveform, estimated_waveform)[0, 1]
-        variance_estimate = np.var(estimated_waveform)
-        variance_target = np.var(target_waveform)
-        
-        # Calculate the MC for this delay
-        MC_k = covariance**2 / (variance_estimate * variance_target)
-
-        # Add to the list of MC values
-        MC_values.append(MC_k)
-
+def plot_forgetting_curve(MC_vec: np.array) -> None:
+   
     # Plot the forgetting curve
-    plt.plot(range(1, len(MC_values) + 1), MC_values)
+    plt.plot(range(1, len(MC_vec) + 1), MC_vec)
     plt.xlabel("Delay")
     plt.ylabel("Memory Capacity")
     plt.title("Forgetting Curve")
-
-    return MC_values
-
+    return
 
 def read_and_parse_voltages(filename):
     # Read the file into a pandas DataFrame
-    df = pd.read_csv(filename, delim_whitespace=True)
+    df = pd.read_csv(filename, sep=r'\s+')
 
     # Get voltage column names by filtering out current (I) columns
     voltage_columns = [col for col in df.columns if "V" in col]
@@ -128,6 +88,8 @@ def read_and_parse_voltages(filename):
 
 def getMcMeasurement(path:str) -> float:
     
+    #import the data from file 
+    OUTPUT_NODES = np.arange(15,16)
     voltage_mat = read_and_parse_voltages(path)
     voltage_mat = voltage_mat[10:]
     estimated_vec = []
@@ -135,11 +97,13 @@ def getMcMeasurement(path:str) -> float:
     n_MC = [0, 0, 0]
     MC_vec = []
 
-    for n in np.arange(15, 16):
+    #for each total number of output nodes
+    for n in OUTPUT_NODES:
         estimated_vec = []
         target_vec = []
 
-        for k in np.arange(1, 30):
+        #for each k-delay
+        for k in np.arange(1, 30): #construct the target and data matrices
             target = np.roll(voltage_mat[:, 0], k)
             if k == 0:
                 target = target[:]
@@ -150,13 +114,21 @@ def getMcMeasurement(path:str) -> float:
                 
             target = target[10:-10]
             data = data[10:-10, :]
-            mse, target_test, prediction_test = kDelayAccuracy(target, 1, data)
+
+            #split test and train sets
+            states_train, states_test, target_train, target_test = train_test_split_time_series(
+                data,
+                target,
+                test_size=0.2,
+                )
+            
+            #compute the prediction
+            prediction_test = linear_regression_predict(states_train, states_test, target_train)
             target_vec.append(target_test)
             estimated_vec.append(prediction_test)
 
-        MemC = generate_forgetting_curve(estimated_vec, target_vec)
-        MC = calculate_memory_capacity(estimated_vec, target_vec)
+        MC, MC_values = calculate_memory_capacity(estimated_vec, target_vec)
 
-        n_MC.append(MC)
-        MC_vec.append(MemC)
+        """n_MC.append(MC)
+        MC_vec.append(MemC)"""
     return MC
