@@ -4,7 +4,7 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 
@@ -20,10 +20,17 @@ def train_test_split_time_series(data: np.array, target: np.array, test_size=0.2
 
 def linear_regression_predict(states_train: np.array, states_test:np.array, target_train: np.array) -> np.array:
     """ Performs linear regression using the states to match the target.
-     Returnsm the predicted waveform"""
+     Returns the predicted waveform"""
     lr = LinearRegression()
     lr.fit(states_train, target_train)
     return lr.predict(states_test)
+
+def ridge_regression_predict(states_train: np.array, states_test: np.array, target_train: np.array, alpha: float = 1.0) -> np.array:
+    """Performs ridge regression using the states to match the target.
+    Returns the predicted waveform."""
+    ridge_reg = Ridge(alpha=alpha)
+    ridge_reg.fit(states_train, target_train)
+    return ridge_reg.predict(states_test)
 
 def calculate_memory_capacity(estimated_waveforms: list[np.array], target_waveforms: list[np.array]) -> float:
     """
@@ -64,7 +71,6 @@ def calculate_memory_capacity(estimated_waveforms: list[np.array], target_wavefo
 
     return MemC, MC_values
 
-#### REMOVE CALCULATING MC HERE, THERE IS A FUNCTION THAT DOES THIS ABOVE ###
 def plot_forgetting_curve(MC_vec: np.array) -> None:
    
     # Plot the forgetting curve
@@ -86,7 +92,7 @@ def read_and_parse_voltages(filename):
 
     return voltage_matrix
 
-def getMcMeasurement(path:str) -> float:
+def calculate_mc_from_file(path:str, mode: str = "linear") -> float:
     
     #import the data from file 
     OUTPUT_NODES = np.arange(15,16)
@@ -123,7 +129,10 @@ def getMcMeasurement(path:str) -> float:
                 )
             
             #compute the prediction
-            prediction_test = linear_regression_predict(states_train, states_test, target_train)
+            if mode.lower() == "linear":
+                prediction_test = linear_regression_predict(states_train, states_test, target_train)
+            elif mode.lower() == "ridge":
+                prediction_test = ridge_regression_predict(states_train, states_test, target_train, alpha = 1.0)
             target_vec.append(target_test)
             estimated_vec.append(prediction_test)
 
