@@ -230,34 +230,38 @@ def folder_analysis_MC(path: str):
         MC_vec.append(np.round(calculate_mc_from_file(filename),2))
     return MC_vec
 
-def calculate_mc_from_file(path:str , model:str = "linear", kdelay:int = 30):
-    bias_elec = '08'
-    gnd_elec = '17'
-    measurement, elec_dict = read_and_parse_to_df(path, bias_elec, gnd_elec) #pd.DataFrame
+def calculate_mc_from_file(path:str , model:str = "linear", kdelay:int = 30, bias_elec:str = "08", gnd_elec:str = "17"):
+    # fetch data into a measurement dataframe and an electrode role dictionary
+    measurement, elec_dict = read_and_parse_to_df(path, bias_elec, gnd_elec)
     bias_voltage = []
     gnd_voltage = []
     float_voltage = []
     target_vec = []
     estimated_vec = []
 
+    # fill matrices for ease of computation
     bias_voltage, gnd_voltage, float_voltage = fillVoltageMatFromDf(measurement, elec_dict)
     for k in range(kdelay):
+        # construct the delayed waveform
         bias_voltage_del, float_voltage_del, gnd_voltage_del = delayWaveforms(bias_voltage, float_voltage, gnd_voltage, k)
-        
+        #divide test and train set
         states_train, states_test, target_train, target_test = train_test_split_time_series(
                     float_voltage_del,
                     bias_voltage_del,
                     test_size=0.2,
                     )
+        # train model
         if model.lower() == "linear":
             prediction_test = linear_regression_predict(states_train, states_test, target_train)
         elif model.lower() == "ridge":
             prediction_test = ridge_regression_predict(states_train, states_test, target_train, alpha = 1.0)
 
+        # arrays must be flattened from [[1],[2],[3]] to [1,2,3]
         prediction_test = np.array(prediction_test).flatten()
         target_test = np.array(target_test).flatten()
         target_vec.append(target_test)
         estimated_vec.append(prediction_test)
+        # return MC and MC for each k delay
     return calculate_memory_capacity(estimated_vec, target_vec)
 
 def fillVoltageMatFromDf(measurement:pd.DataFrame, elec_dict:dict) -> list[np.array]:
