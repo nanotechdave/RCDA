@@ -1,7 +1,7 @@
 import numpy as np
-from modules.memorycapacity import train_test_split_time_series
-from modules.memorycapacity import calculate_memory_capacity
-from modules.memorycapacity import calculate_mc_from_file
+from modules.memorycapacity.memorycapacity import train_test_split_time_series
+from modules.memorycapacity.memorycapacity import calculate_memory_capacity
+from modules.memorycapacity.memorycapacity import calculate_mc_from_file
 
 
 def test_train_test_split_time_series() -> None:
