@@ -20,13 +20,13 @@ def test_calculate_memory_capacity() -> None:
     assert MC ==2
 
 def test_calculate_mc_from_file_linear() -> None:
-    path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad131M/011_INRiMARC_NWN_Pad131M_gridSE_MemoryCapacity_2024_03_29.txt"
+    path = "tests/test_files/011_INRiMARC_NWN_Pad131M_gridSE_MemoryCapacity_2024_03_29.txt"
     MC, MC_vec = calculate_mc_from_file(path, "linear", 30, "08", "17")
     MC = np.round(MC,1)
     assert MC == 2.3
 
 def test_calculate_mc_from_file_ridge() -> None:
-    path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad131M/011_INRiMARC_NWN_Pad131M_gridSE_MemoryCapacity_2024_03_29.txt"
+    path = "tests/test_files/011_INRiMARC_NWN_Pad131M_gridSE_MemoryCapacity_2024_03_29.txt"
     MC, MC_vec = calculate_mc_from_file(path, "ridge", 30, "08", "17")
     MC = np.round(MC,1)
     assert MC == 1.9

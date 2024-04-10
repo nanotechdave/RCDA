@@ -1,14 +1,11 @@
-import itertools
-import random
-from utils import find_specific_txt_files, parse_measurement_data
+
+from utils import find_specific_txt_files
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn import metrics
-from sklearn.model_selection import train_test_split
-from scipy.stats import pearsonr
+
 
 
 def train_test_split_time_series(data: np.array, target: np.array, test_size=0.2):
@@ -73,27 +70,6 @@ def calculate_memory_capacity(estimated_waveforms: list[np.array], target_wavefo
 
     return MemC, MC_values
 
-def extract_voltage_matrix(df: pd.DataFrame) -> np.array:
-    """
-    Extracts voltage measurements from the DataFrame and creates a matrix of voltages.
-    
-    Parameters:
-    - df: pd.DataFrame - The DataFrame containing the measurement data.
-    
-    Returns:
-    - np.array - A 2D numpy array (matrix) containing the voltage measurements.
-    """
-    # Filter columns that contain '_V[' in their column name, indicating a voltage measurement
-    voltage_columns = [col for col in df.columns if '_V[' in col]
-    
-    # Select only the voltage columns from the DataFrame
-    voltage_df = df[voltage_columns]
-    
-    # Convert the DataFrame to a numpy array (matrix)
-    voltage_matrix = voltage_df.to_numpy()
-    
-    return voltage_matrix
-
 def active_electrode_analysis(measurements:pd.DataFrame, electrode_status: dict, MC_full: float, kDelay: int = 30) -> np.array:
     voltage_columns = [col for col in measurements.columns if '_V[' in col]
     mc_without_electrode = pd.DataFrame()
@@ -147,20 +123,30 @@ def plot_forgetting_curve(MC_vec: np.array) -> None:
     plt.show()
     return
 
-def read_and_parse_voltages_to_mat(filename):
-    # Read the file into a pandas DataFrame
-    df = pd.read_csv(filename, sep=r'\s+')
-
-    # Get voltage column names by filtering out current (I) columns
-    voltage_columns = [col for col in df.columns if "V" in col]
-
-    # Create a matrix with the voltage values
-    voltage_matrix = df[voltage_columns].values
-
+def extract_voltage_matrix(df: pd.DataFrame) -> np.array:
+    """
+    Extracts voltage measurements from the DataFrame and creates a matrix of voltages.
+    
+    Parameters:
+    - df: pd.DataFrame - The DataFrame containing the measurement data.
+    
+    Returns:
+    - np.array - A 2D numpy array (matrix) containing the voltage measurements.
+    """
+    # Filter columns that contain '_V[' in their column name, indicating a voltage measurement
+    voltage_columns = [col for col in df.columns if '_V[' in col]
+    
+    # Select only the voltage columns from the DataFrame
+    voltage_df = df[voltage_columns]
+    
+    # Convert the DataFrame to a numpy array (matrix)
+    voltage_matrix = voltage_df.to_numpy()
+    
     return voltage_matrix
 
 def read_and_parse_to_df(filename: str, bias_electrode: str = '08', gnd_electrode: str = '17'):
     # Read the file into a pandas DataFrame
+    assert len(bias_electrode)==2 and len(gnd_electrode) ==2 and int(bias_electrode)>0 and int(bias_electrode)<64, "bias_electrode and gnd_electrode must be 2-digit numbers between 01 and 64"
     df = pd.read_csv(filename, sep=r'\s+')
     for col in df.columns:
         df.rename(columns={col: reformat_measurement_header(col)}, inplace=True)
