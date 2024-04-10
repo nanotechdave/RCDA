@@ -1,10 +1,11 @@
 
-from utils import find_specific_txt_files
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+import os
+import re
 
 
 
@@ -215,8 +216,9 @@ def folder_analysis_MC(path: str):
     
     filenames = find_specific_txt_files(path)
     MC_vec = []
-    for filename in filenames:        
-        MC_vec.append(np.round(calculate_mc_from_file(filename),2))
+    for filename in filenames:
+        MC_val, _ = calculate_mc_from_file(filename)
+        MC_vec.append(MC_val)
     return MC_vec
 
 def calculate_mc_from_file(path:str , model:str = "linear", kdelay:int = 30, bias_elec:str = "08", gnd_elec:str = "17"):
@@ -296,18 +298,40 @@ def reformat_measurement_header(s:str) -> str:
         # Return the original string if it doesn't start with a single digit
         return s
 
+def find_specific_txt_files(folder_path: str) -> list:
+    """
+    Scans the given folder for .txt files that contain 'MemoryCapacity' in their names
+    but not 'log'.
+    
+    Parameters:
+    - folder_path: str - The path to the folder to be scanned.
+    
+    Returns:
+    - List of paths to the files that match the criteria.
+    """
+    # List all files in the directory
+    all_files = os.listdir(folder_path)
+    
+    # Compile a regular expression to match the criteria
+    pattern = re.compile(r'MemoryCapacity(?!.*log).*\.txt$', re.IGNORECASE)
+    
+    # Filter files using the regular expression
+    matching_files = [file for file in all_files if pattern.search(file)]
+    
+    # Prepend the folder path to each filename
+    full_paths = [os.path.join(folder_path, file) for file in matching_files]
+    
+    return full_paths
+
 path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad130M/"
 filename = "011_INRiMARC_NWN_Pad130M_gridSE_MemoryCapacity_2024_03_28.txt"
 filepath = path+filename
 
 MC, MCval = calculate_mc_from_file(filepath, "linear", 30)
-
+MC_val = folder_analysis_MC(path)
 """
 measurement, electrode_status = read_and_parse_to_df(filepath)
 active_electrode_analysis(measurement, electrode_status, calculate_mc_from_file(filepath), 30)
 print(calculate_mc_from_file(filepath))
 print(read_and_parse_to_df(filepath)[1])"""
 #print(folder_analysis_MC(path))
-
-##### to do: calculate mc from df - generate rolling df 
-
