@@ -6,7 +6,9 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from sklearn import metrics
 from sklearn.model_selection import train_test_split
+from scipy.stats import pearsonr
 
 
 def train_test_split_time_series(data: np.array, target: np.array, test_size=0.2):
@@ -64,6 +66,7 @@ def calculate_memory_capacity(estimated_waveforms: list[np.array], target_wavefo
             MC_k = 1
         else:
             MC_k = covariance**2 / (variance_estimate * variance_target)
+
         MC_values.append(MC_k)
         # Add to the total MC
         MemC += MC_k
@@ -242,26 +245,27 @@ def calculate_mc_from_file(path:str , model:str = "linear", kdelay:int = 30, bia
     # fill matrices for ease of computation
     bias_voltage, gnd_voltage, float_voltage = fillVoltageMatFromDf(measurement, elec_dict)
     for k in range(kdelay):
-        # construct the delayed waveform
-        bias_voltage_del, float_voltage_del, gnd_voltage_del = delayWaveforms(bias_voltage, float_voltage, gnd_voltage, k)
-        #divide test and train set
-        states_train, states_test, target_train, target_test = train_test_split_time_series(
-                    float_voltage_del,
-                    bias_voltage_del,
-                    test_size=0.2,
-                    )
-        # train model
-        if model.lower() == "linear":
-            prediction_test = linear_regression_predict(states_train, states_test, target_train)
-        elif model.lower() == "ridge":
-            prediction_test = ridge_regression_predict(states_train, states_test, target_train, alpha = 1.0)
+        if k!=0:
+            # construct the delayed waveform
+            bias_voltage_del, float_voltage_del, gnd_voltage_del = delayWaveforms(bias_voltage, float_voltage, gnd_voltage, k)
+            #divide test and train set
+            states_train, states_test, target_train, target_test = train_test_split_time_series(
+                        float_voltage_del,
+                        bias_voltage_del,
+                        test_size=0.2,
+                        )
+            # train model
+            if model.lower() == "linear":
+                prediction_test = linear_regression_predict(states_train, states_test, target_train)
+            elif model.lower() == "ridge":
+                prediction_test = ridge_regression_predict(states_train, states_test, target_train, alpha = 1.0)
 
-        # arrays must be flattened from [[1],[2],[3]] to [1,2,3]
-        prediction_test = np.array(prediction_test).flatten()
-        target_test = np.array(target_test).flatten()
-        target_vec.append(target_test)
-        estimated_vec.append(prediction_test)
-        # return MC and MC for each k delay
+            # arrays must be flattened from [[1],[2],[3]] to [1,2,3]
+            prediction_test = np.array(prediction_test).flatten()
+            target_test = np.array(target_test).flatten()
+            target_vec.append(target_test)
+            estimated_vec.append(prediction_test)
+            # return MC and MC for each k delay
     return calculate_memory_capacity(estimated_vec, target_vec)
 
 def fillVoltageMatFromDf(measurement:pd.DataFrame, elec_dict:dict) -> list[np.array]:
@@ -311,7 +315,7 @@ filename = "011_INRiMARC_NWN_Pad130M_gridSE_MemoryCapacity_2024_03_28.txt"
 filepath = path+filename
 
 MC, MCval = calculate_mc_from_file(filepath, "linear", 30)
-plot_forgetting_curve(MCval)
+
 """
 measurement, electrode_status = read_and_parse_to_df(filepath)
 active_electrode_analysis(measurement, electrode_status, calculate_mc_from_file(filepath), 30)
