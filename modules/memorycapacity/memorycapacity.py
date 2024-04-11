@@ -4,7 +4,9 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
 from utils import find_specific_txt_files
+
 
 def train_test_split_time_series(data: np.array, target: np.array, test_size=0.2):
     """ Splits data and target into training and test set."""
@@ -294,14 +296,14 @@ def reformat_measurement_header(s:str) -> str:
     else:
         # Return the original string if it doesn't start with a single digit
         return s
-
+"""
 path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad130M/"
 filename = "011_INRiMARC_NWN_Pad130M_gridSE_MemoryCapacity_2024_03_28.txt"
 filepath = path+filename
 
 MC, MCval = calculate_mc_from_file(filepath, "linear", 30)
 MC_val = folder_analysis_MC(path)
-"""
+
 measurement, electrode_status = read_and_parse_to_df(filepath)
 active_electrode_analysis(measurement, electrode_status, calculate_mc_from_file(filepath), 30)
 print(calculate_mc_from_file(filepath))
