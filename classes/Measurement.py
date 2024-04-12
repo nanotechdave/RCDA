@@ -14,10 +14,10 @@ class Measurement():
         return
 
     def __str__(self):
-        return(f"Meas.x")
+        return(f"Meas. {self.number}, {self.experiment}")
     
 
 class MemoryCapacity(Measurement):
     def __init__(self):
         return
-    
+
