@@ -1,6 +1,10 @@
 import logging
 
 from classes import sample
+import pandas as pd
+
+PATH = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad130M/"
+SAMPLE_NAME = "130M" 
 
 
 def main():
@@ -16,8 +20,9 @@ def main():
     logging.error("this is an error")
     logging.critical("critical message") """
 
-    NWN_120M = sample.Sample("120M", "E:/PoliTo/PhD/MIsure/InrimARC/NWN_Pad120M")
-    print(NWN_120M)
+    NWN_130M = sample.Sample(SAMPLE_NAME, PATH)
+    for meas in NWN_130M.measurements:
+        print(meas.number, meas.experiment)
     return
 
 

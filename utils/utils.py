@@ -79,6 +79,7 @@ def extract_voltage_matrix(df: pd.DataFrame) -> np.array:
 def read_and_parse_to_df(filename: str, bias_electrode: str = '08', gnd_electrode: str = '17'):
     # Read the file into a pandas DataFrame
     assert len(bias_electrode)==2 and len(gnd_electrode) ==2 and int(bias_electrode)>0 and int(bias_electrode)<64, "bias_electrode and gnd_electrode must be 2-digit numbers between 01 and 64"
+
     df = pd.read_csv(filename, sep=r'\s+')
     for col in df.columns:
         df.rename(columns={col: reformat_measurement_header(col)}, inplace=True)
@@ -115,3 +116,15 @@ def reformat_measurement_header(s:str) -> str:
     else:
         # Return the original string if it doesn't start with a single digit
         return s
+    
+def experiment_from_filename(filename:str) -> str:
+    if "memorycapacity" in filename.lower():
+        return "memorycapacity"
+    elif "tomography" in filename.lower():
+        return "tomography"
+    elif "custom wave" in filename.lower():
+        return "custom wave measurement"
+    elif "conductivitymatrix" in filename.lower():
+        return "conductivitymatrix"
+    else:
+        return "undefined"
