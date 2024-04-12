@@ -98,13 +98,13 @@ def folder_analysis_MC(path: str):
     filenames = ut.find_specific_txt_files(path)
     MC_vec = []
     for filename in filenames:
-        MC_val, _ = calculate_mc_from_file(filename)
+        data, elec = ut.read_and_parse_to_df(filename)
+        MC_val, _ = calculate_mc_from_df(data, elec)
         MC_vec.append(MC_val)
     return MC_vec
 
-def calculate_mc_from_file(path:str , model:str = "linear", kdelay:int = 30, bias_elec:str = "08", gnd_elec:str = "17"):
+def calculate_mc_from_df(measurement:pd.DataFrame , elec_dict:dict, model:str = "linear", kdelay:int = 30, bias_elec:str = "08", gnd_elec:str = "17"):
     # fetch data into a measurement dataframe and an electrode role dictionary
-    measurement, elec_dict = ut.read_and_parse_to_df(path, bias_elec, gnd_elec)
     bias_voltage = []
     gnd_voltage = []
     float_voltage = []

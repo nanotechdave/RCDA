@@ -9,6 +9,8 @@ class Measurement():
         self.data, self.elec = ut.read_and_parse_to_df(os.path.join(path, filename))
         self.number = filename[0:3]
         self.experiment = ut.experiment_from_filename(filename)
+        self.filename = filename
+        self.path = path
         return
 
     def __str__(self):
