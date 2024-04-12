@@ -4,6 +4,8 @@ import numpy as np
 import pandas as pd
 import utils.utils as ut
 
+
+
 def calculate_memory_capacity(estimated_waveforms: list[np.array], target_waveforms: list[np.array]) -> float:
     """
     Calculate the memory capacity of a system given the estimated and target waveforms for each delay.
@@ -126,6 +128,8 @@ def calculate_mc_from_df(measurement:pd.DataFrame , elec_dict:dict, model:str = 
             # train model
             if model.lower() == "linear":
                 prediction_test = ut.linear_regression_predict(states_train, states_test, target_train)
+            elif model.lower() == "sequential":
+                prediction_test = ut.sequential_regression_evaluate(states_train, states_test, target_train)
             elif model.lower() == "ridge":
                 prediction_test = ut.ridge_regression_predict(states_train, states_test, target_train, alpha = 1.0)
 

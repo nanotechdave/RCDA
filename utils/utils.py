@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import re
 from sklearn.linear_model import LinearRegression, Ridge
+from mlxtend.feature_selection import SequentialFeatureSelector
 
 def find_specific_txt_files(folder_path: str) -> list:
     """
@@ -54,6 +55,23 @@ def ridge_regression_predict(states_train: np.array, states_test: np.array, targ
     ridge_reg = Ridge(alpha=alpha)
     ridge_reg.fit(states_train, target_train)
     return ridge_reg.predict(states_test)
+
+def sequential_regression_evaluate(states_train: np.array, states_test: np.array, target_train:np.array):
+    linear_regressor = LinearRegression()
+    sfs = SequentialFeatureSelector(linear_regressor,
+                                    k_features="best",
+                                    forward=True,
+                                    floating=False,
+                                    scoring="neg_mean_squared_error",
+                                    cv=5)
+    sfs = sfs.fit(states_train, target_train)
+    selected_features = list(sfs.k_feature_idx_)
+    print(f"Selected features indices: {selected_features}")
+    X_train_selected = sfs.transform(states_train)
+    X_test_selected = sfs.transform(states_test)
+
+    linear_regressor.fit(X_train_selected, target_train)
+    return linear_regressor.predict(X_test_selected)
 
 def extract_voltage_matrix(df: pd.DataFrame) -> np.array:
     """

@@ -23,3 +23,10 @@ def test_calculate_mc_from_df_ridge() -> None:
     MC, MC_vec = calculate_mc_from_df(measurement, elec_dict, "ridge", 30, "08", "17")
     MC = np.round(MC,1)
     assert MC == 1.9
+
+def test_calculate_mc_from_df_sequential() -> None:
+    path = "tests/test_files/011_INRiMARC_NWN_Pad131M_gridSE_MemoryCapacity_2024_03_29.txt"
+    measurement, elec_dict = read_and_parse_to_df(path)
+    MC, MC_vec = calculate_mc_from_df(measurement, elec_dict, "sequential", 30, "08", "17")
+    MC = np.round(MC,1)
+    assert MC == 2.2
