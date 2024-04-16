@@ -29,4 +29,4 @@ def test_calculate_mc_from_df_sequential() -> None:
     measurement, elec_dict = read_and_parse_to_df(path)
     MC, MC_vec = calculate_mc_from_df(measurement, elec_dict, "sequential", 30, "08", "17")
     MC = np.round(MC,1)
-    assert MC == 2.2
+    assert MC == 2.2 

@@ -2,8 +2,10 @@ import numpy as np
 import pandas as pd
 import os
 import re
+from sklearn.metrics import make_scorer
 from sklearn.linear_model import LinearRegression, Ridge
 from mlxtend.feature_selection import SequentialFeatureSelector
+from modules.memorycapacity import memorycapacity
 
 def find_specific_txt_files(folder_path: str) -> list:
     """
@@ -58,11 +60,12 @@ def ridge_regression_predict(states_train: np.array, states_test: np.array, targ
 
 def sequential_regression_evaluate(states_train: np.array, states_test: np.array, target_train:np.array):
     linear_regressor = LinearRegression()
+    
+    # If no scoring is passed, default is r2 for regressions
     sfs = SequentialFeatureSelector(linear_regressor,
                                     k_features="best",
                                     forward=True,
                                     floating=False,
-                                    scoring="neg_mean_squared_error",
                                     cv=5)
     sfs = sfs.fit(states_train, target_train)
     selected_features = list(sfs.k_feature_idx_)

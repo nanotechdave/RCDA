@@ -2,6 +2,8 @@ import logging
 
 from classes import sample
 import pandas as pd
+from utils import utils as ut
+from modules.memorycapacity import memorycapacity
 
 PATH = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad130M/"
 SAMPLE_NAME = "130M" 
@@ -23,6 +25,10 @@ def main():
     NWN_130M = sample.Sample(SAMPLE_NAME, PATH)
     for meas in NWN_130M.measurements:
         print(meas.number, meas.experiment)
+    path = "tests/test_files/011_INRiMARC_NWN_Pad131M_gridSE_MemoryCapacity_2024_03_29.txt"
+    measurement, elec_dict = ut.read_and_parse_to_df(path)
+    MC, MC_vec = memorycapacity.calculate_mc_from_df(measurement, elec_dict, "sequential", 30, "08", "17")
+    
     return
 
 

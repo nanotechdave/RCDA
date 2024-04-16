@@ -31,7 +31,7 @@ def calculate_memory_capacity(estimated_waveforms: list[np.array], target_wavefo
         variance_target = np.var(target_waveform)
 
         # Calculate the MC for this delay
-        if variance_target == 0 and variance_estimate == 0:
+        if variance_target == 0 or variance_estimate == 0:
             MC_k = 1
         else:
             MC_k = covariance**2 / (variance_estimate * variance_target)
@@ -39,8 +39,10 @@ def calculate_memory_capacity(estimated_waveforms: list[np.array], target_wavefo
         MC_values.append(MC_k)
         # Add to the total MC
         MemC += MC_k
-
+    
     return MemC, MC_values
+
+
 
 def active_electrode_analysis(measurements:pd.DataFrame, electrode_status: dict, MC_full: float, kDelay: int = 30) -> np.array:
     voltage_columns = [col for col in measurements.columns if "_V[" in col]
