@@ -28,3 +28,2294 @@
 2024-04-03 17:37:33 WARNING this is a warning
 2024-04-03 17:37:33 ERROR this is an error
 2024-04-03 17:37:33 CRITICAL critical message
+2024-04-17 12:48:51 DEBUG features scores: {'Feature 1': df_resid    2.369000e+03
+ssr         3.272432e-01
+df_diff     1.000000e+00
+ss_diff     2.402743e-02
+F           1.739409e+02
+Pr(>F)      2.218809e-38
+Name: 1, dtype: float64, 'Feature 2': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.001282
+F              9.277605
+Pr(>F)         0.002345
+Name: 1, dtype: float64, 'Feature 3': df_resid     2.369000e+03
+ssr          3.272432e-01
+df_diff      1.000000e+00
+ss_diff      1.489044e-01
+F            1.077959e+03
+Pr(>F)      3.514968e-195
+Name: 1, dtype: float64, 'Feature 4': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.000582
+F              4.210888
+Pr(>F)         0.040275
+Name: 1, dtype: float64, 'Feature 5': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.000024
+F              0.174073
+Pr(>F)         0.676555
+Name: 1, dtype: float64, 'Feature 6': df_resid    2.369000e+03
+ssr         3.272432e-01
+df_diff     1.000000e+00
+ss_diff     1.631045e-02
+F           1.180757e+02
+Pr(>F)      7.103519e-27
+Name: 1, dtype: float64, 'Feature 7': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.000021
+F              0.152425
+Pr(>F)         0.696264
+Name: 1, dtype: float64, 'Feature 8': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.002451
+F             17.742032
+Pr(>F)         0.000026
+Name: 1, dtype: float64, 'Feature 9': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.001116
+F              8.081639
+Pr(>F)         0.004510
+Name: 1, dtype: float64, 'Feature 10': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.001153
+F              8.346288
+Pr(>F)         0.003900
+Name: 1, dtype: float64, 'Feature 11': df_resid    2.369000e+03
+ssr         3.272432e-01
+df_diff     1.000000e+00
+ss_diff     6.734982e-03
+F           4.875631e+01
+Pr(>F)      3.749696e-12
+Name: 1, dtype: float64, 'Feature 12': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.001147
+F              8.304961
+Pr(>F)         0.003989
+Name: 1, dtype: float64, 'Feature 13': df_resid    2369.000000
+ssr            0.327243
+df_diff        1.000000
+ss_diff        0.360351
+F           2608.676946
+Pr(>F)         0.000000
+Name: 1, dtype: float64}
+2024-04-17 12:48:52 DEBUG features scores: {'Feature 1': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.021320
+F              2.473154
+Pr(>F)         0.115939
+Name: 1, dtype: float64, 'Feature 2': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.022966
+F              2.664132
+Pr(>F)         0.102767
+Name: 1, dtype: float64, 'Feature 3': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.157774
+F             18.302042
+Pr(>F)         0.000020
+Name: 1, dtype: float64, 'Feature 4': df_resid    2.368000e+03
+ssr         2.041356e+01
+df_diff     1.000000e+00
+ss_diff     3.066973e-01
+F           3.557729e+01
+Pr(>F)      2.818744e-09
+Name: 1, dtype: float64, 'Feature 5': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.141871
+F             16.457239
+Pr(>F)         0.000051
+Name: 1, dtype: float64, 'Feature 6': df_resid     2.368000e+03
+ssr          2.041356e+01
+df_diff      1.000000e+00
+ss_diff      1.424862e+01
+F            1.652859e+03
+Pr(>F)      1.451767e-274
+Name: 1, dtype: float64, 'Feature 7': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.033425
+F              3.877321
+Pr(>F)         0.049059
+Name: 1, dtype: float64, 'Feature 8': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.002504
+F              0.290508
+Pr(>F)         0.589946
+Name: 1, dtype: float64, 'Feature 9': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.046698
+F              5.417049
+Pr(>F)         0.020025
+Name: 1, dtype: float64, 'Feature 10': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.130546
+F             15.143487
+Pr(>F)         0.000102
+Name: 1, dtype: float64, 'Feature 11': df_resid    2.368000e+03
+ssr         2.041356e+01
+df_diff     1.000000e+00
+ss_diff     2.343426e-01
+F           2.718405e+01
+Pr(>F)      2.009973e-07
+Name: 1, dtype: float64, 'Feature 12': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.116771
+F             13.545611
+Pr(>F)         0.000238
+Name: 1, dtype: float64, 'Feature 13': df_resid    2368.000000
+ssr           20.413563
+df_diff        1.000000
+ss_diff        0.205895
+F             23.884137
+Pr(>F)         0.000001
+Name: 1, dtype: float64}
+2024-04-17 12:48:52 DEBUG features scores: {'Feature 1': df_resid    2.367000e+03
+ssr         5.530387e+01
+df_diff     1.000000e+00
+ss_diff     1.362086e+00
+F           5.829712e+01
+Pr(>F)      3.247308e-14
+Name: 1, dtype: float64, 'Feature 2': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.018273
+F              0.782076
+Pr(>F)         0.376597
+Name: 1, dtype: float64, 'Feature 3': df_resid    2.367000e+03
+ssr         5.530387e+01
+df_diff     1.000000e+00
+ss_diff     1.704926e+00
+F           7.297067e+01
+Pr(>F)      2.318007e-17
+Name: 1, dtype: float64, 'Feature 4': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.187322
+F              8.017345
+Pr(>F)         0.004672
+Name: 1, dtype: float64, 'Feature 5': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.033586
+F              1.437494
+Pr(>F)         0.230665
+Name: 1, dtype: float64, 'Feature 6': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.352004
+F             15.065744
+Pr(>F)         0.000107
+Name: 1, dtype: float64, 'Feature 7': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.000137
+F              0.005874
+Pr(>F)         0.938915
+Name: 1, dtype: float64, 'Feature 8': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.026072
+F              1.115883
+Pr(>F)         0.290914
+Name: 1, dtype: float64, 'Feature 9': df_resid    2.367000e+03
+ssr         5.530387e+01
+df_diff     1.000000e+00
+ss_diff     8.022148e-01
+F           3.433471e+01
+Pr(>F)      5.286818e-09
+Name: 1, dtype: float64, 'Feature 10': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.052054
+F              2.227906
+Pr(>F)         0.135671
+Name: 1, dtype: float64, 'Feature 11': df_resid    2.367000e+03
+ssr         5.530387e+01
+df_diff     1.000000e+00
+ss_diff     1.193559e+00
+F           5.108420e+01
+Pr(>F)      1.173511e-12
+Name: 1, dtype: float64, 'Feature 12': df_resid    2367.000000
+ssr           55.303871
+df_diff        1.000000
+ss_diff        0.099278
+F              4.249102
+Pr(>F)         0.039380
+Name: 1, dtype: float64, 'Feature 13': df_resid    2.367000e+03
+ssr         5.530387e+01
+df_diff     1.000000e+00
+ss_diff     2.279600e+00
+F           9.756667e+01
+Pr(>F)      1.413673e-22
+Name: 1, dtype: float64}
+2024-04-17 12:48:52 DEBUG features scores: {'Feature 1': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.007769
+F              0.289191
+Pr(>F)         0.590790
+Name: 1, dtype: float64, 'Feature 2': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.018252
+F              0.679366
+Pr(>F)         0.409888
+Name: 1, dtype: float64, 'Feature 3': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.004877
+F              0.181519
+Pr(>F)         0.670110
+Name: 1, dtype: float64, 'Feature 4': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.547819
+F             20.390650
+Pr(>F)         0.000007
+Name: 1, dtype: float64, 'Feature 5': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.008168
+F              0.304011
+Pr(>F)         0.581431
+Name: 1, dtype: float64, 'Feature 6': df_resid    2.366000e+03
+ssr         6.356542e+01
+df_diff     1.000000e+00
+ss_diff     1.400237e+00
+F           5.211891e+01
+Pr(>F)      7.007144e-13
+Name: 1, dtype: float64, 'Feature 7': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.001779
+F              0.066213
+Pr(>F)         0.796955
+Name: 1, dtype: float64, 'Feature 8': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.029118
+F              1.083804
+Pr(>F)         0.297955
+Name: 1, dtype: float64, 'Feature 9': df_resid    2.366000e+03
+ssr         6.356542e+01
+df_diff     1.000000e+00
+ss_diff     2.869749e+00
+F           1.068164e+02
+Pr(>F)      1.609357e-24
+Name: 1, dtype: float64, 'Feature 10': df_resid    2.366000e+03
+ssr         6.356542e+01
+df_diff     1.000000e+00
+ss_diff     2.949107e-07
+F           1.097702e-05
+Pr(>F)      9.973568e-01
+Name: 1, dtype: float64, 'Feature 11': df_resid    2.366000e+03
+ssr         6.356542e+01
+df_diff     1.000000e+00
+ss_diff     1.737382e+00
+F           6.466795e+01
+Pr(>F)      1.386592e-15
+Name: 1, dtype: float64, 'Feature 12': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.264233
+F              9.835145
+Pr(>F)         0.001733
+Name: 1, dtype: float64, 'Feature 13': df_resid    2366.000000
+ssr           63.565417
+df_diff        1.000000
+ss_diff        0.318743
+F             11.864073
+Pr(>F)         0.000582
+Name: 1, dtype: float64}
+2024-04-17 12:48:53 DEBUG features scores: {'Feature 1': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.014207
+F              0.501726
+Pr(>F)         0.478812
+Name: 1, dtype: float64, 'Feature 2': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.106057
+F              3.745489
+Pr(>F)         0.053069
+Name: 1, dtype: float64, 'Feature 3': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.055130
+F              1.946964
+Pr(>F)         0.163045
+Name: 1, dtype: float64, 'Feature 4': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.675785
+F             23.865805
+Pr(>F)         0.000001
+Name: 1, dtype: float64, 'Feature 5': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.001375
+F              0.048546
+Pr(>F)         0.825632
+Name: 1, dtype: float64, 'Feature 6': df_resid    2.366000e+03
+ssr         6.699577e+01
+df_diff     1.000000e+00
+ss_diff     2.532533e+00
+F           8.943809e+01
+Pr(>F)      7.350397e-21
+Name: 1, dtype: float64, 'Feature 7': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.062239
+F              2.198020
+Pr(>F)         0.138321
+Name: 1, dtype: float64, 'Feature 8': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.017247
+F              0.609093
+Pr(>F)         0.435208
+Name: 1, dtype: float64, 'Feature 9': df_resid    2.366000e+03
+ssr         6.699577e+01
+df_diff     1.000000e+00
+ss_diff     2.695821e+00
+F           9.520472e+01
+Pr(>F)      4.449888e-22
+Name: 1, dtype: float64, 'Feature 10': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.062084
+F              2.192540
+Pr(>F)         0.138814
+Name: 1, dtype: float64, 'Feature 11': df_resid    2.366000e+03
+ssr         6.699577e+01
+df_diff     1.000000e+00
+ss_diff     1.173910e+00
+F           4.145740e+01
+Pr(>F)      1.453998e-10
+Name: 1, dtype: float64, 'Feature 12': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.212855
+F              7.517121
+Pr(>F)         0.006158
+Name: 1, dtype: float64, 'Feature 13': df_resid    2366.000000
+ssr           66.995767
+df_diff        1.000000
+ss_diff        0.172451
+F              6.090210
+Pr(>F)         0.013664
+Name: 1, dtype: float64}
+2024-04-17 12:48:53 DEBUG features scores: {'Feature 1': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.084406
+F              2.870561
+Pr(>F)         0.090345
+Name: 1, dtype: float64, 'Feature 2': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.066004
+F              2.244700
+Pr(>F)         0.134206
+Name: 1, dtype: float64, 'Feature 3': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.143448
+F              4.878495
+Pr(>F)         0.027289
+Name: 1, dtype: float64, 'Feature 4': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.439175
+F             14.935801
+Pr(>F)         0.000114
+Name: 1, dtype: float64, 'Feature 5': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.059812
+F              2.034122
+Pr(>F)         0.153935
+Name: 1, dtype: float64, 'Feature 6': df_resid    2.365000e+03
+ssr         6.954085e+01
+df_diff     1.000000e+00
+ss_diff     1.548224e+00
+F           5.265321e+01
+Pr(>F)      5.370292e-13
+Name: 1, dtype: float64, 'Feature 7': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.017105
+F              0.581736
+Pr(>F)         0.445709
+Name: 1, dtype: float64, 'Feature 8': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.086732
+F              2.949635
+Pr(>F)         0.086028
+Name: 1, dtype: float64, 'Feature 9': df_resid    2.365000e+03
+ssr         6.954085e+01
+df_diff     1.000000e+00
+ss_diff     1.542235e+00
+F           5.244956e+01
+Pr(>F)      5.943651e-13
+Name: 1, dtype: float64, 'Feature 10': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.013610
+F              0.462875
+Pr(>F)         0.496350
+Name: 1, dtype: float64, 'Feature 11': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.646997
+F             22.003591
+Pr(>F)         0.000003
+Name: 1, dtype: float64, 'Feature 12': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.140493
+F              4.778004
+Pr(>F)         0.028923
+Name: 1, dtype: float64, 'Feature 13': df_resid    2365.000000
+ssr           69.540852
+df_diff        1.000000
+ss_diff        0.007535
+F              0.256248
+Pr(>F)         0.612757
+Name: 1, dtype: float64}
+2024-04-17 12:48:53 DEBUG features scores: {'Feature 1': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.012943
+F              0.428262
+Pr(>F)         0.512906
+Name: 1, dtype: float64, 'Feature 2': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.001424
+F              0.047102
+Pr(>F)         0.828204
+Name: 1, dtype: float64, 'Feature 3': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.034065
+F              1.127154
+Pr(>F)         0.288492
+Name: 1, dtype: float64, 'Feature 4': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.028590
+F              0.946024
+Pr(>F)         0.330833
+Name: 1, dtype: float64, 'Feature 5': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.011207
+F              0.370838
+Pr(>F)         0.542606
+Name: 1, dtype: float64, 'Feature 6': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.718719
+F             23.781564
+Pr(>F)         0.000001
+Name: 1, dtype: float64, 'Feature 7': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.022958
+F              0.759654
+Pr(>F)         0.383525
+Name: 1, dtype: float64, 'Feature 8': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.000041
+F              0.001367
+Pr(>F)         0.970507
+Name: 1, dtype: float64, 'Feature 9': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.416152
+F             13.769971
+Pr(>F)         0.000211
+Name: 1, dtype: float64, 'Feature 10': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.049989
+F              1.654083
+Pr(>F)         0.198530
+Name: 1, dtype: float64, 'Feature 11': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.420764
+F             13.922563
+Pr(>F)         0.000195
+Name: 1, dtype: float64, 'Feature 12': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.006213
+F              0.205590
+Pr(>F)         0.650288
+Name: 1, dtype: float64, 'Feature 13': df_resid    2364.000000
+ssr           71.444113
+df_diff        1.000000
+ss_diff        0.032111
+F              1.062506
+Pr(>F)         0.302750
+Name: 1, dtype: float64}
+2024-04-17 12:48:54 DEBUG features scores: {'Feature 1': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.000416
+F              0.013687
+Pr(>F)         0.906877
+Name: 1, dtype: float64, 'Feature 2': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.001887
+F              0.062022
+Pr(>F)         0.803350
+Name: 1, dtype: float64, 'Feature 3': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.010896
+F              0.358163
+Pr(>F)         0.549585
+Name: 1, dtype: float64, 'Feature 4': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.148566
+F              4.883334
+Pr(>F)         0.027213
+Name: 1, dtype: float64, 'Feature 5': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.006912
+F              0.227208
+Pr(>F)         0.633646
+Name: 1, dtype: float64, 'Feature 6': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.449061
+F             14.760504
+Pr(>F)         0.000125
+Name: 1, dtype: float64, 'Feature 7': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.227551
+F              7.479534
+Pr(>F)         0.006287
+Name: 1, dtype: float64, 'Feature 8': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.029858
+F              0.981411
+Pr(>F)         0.321952
+Name: 1, dtype: float64, 'Feature 9': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.195264
+F              6.418268
+Pr(>F)         0.011359
+Name: 1, dtype: float64, 'Feature 10': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.001772
+F              0.058237
+Pr(>F)         0.809326
+Name: 1, dtype: float64, 'Feature 11': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.239750
+F              7.880527
+Pr(>F)         0.005038
+Name: 1, dtype: float64, 'Feature 12': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.017503
+F              0.575303
+Pr(>F)         0.448235
+Name: 1, dtype: float64, 'Feature 13': df_resid    2363.000000
+ssr           71.889884
+df_diff        1.000000
+ss_diff        0.053690
+F              1.764780
+Pr(>F)         0.184158
+Name: 1, dtype: float64}
+2024-04-17 12:48:54 DEBUG features scores: {'Feature 1': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.055294
+F              1.822708
+Pr(>F)         0.177121
+Name: 1, dtype: float64, 'Feature 2': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.004257
+F              0.140329
+Pr(>F)         0.707988
+Name: 1, dtype: float64, 'Feature 3': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.076793
+F              2.531383
+Pr(>F)         0.111736
+Name: 1, dtype: float64, 'Feature 4': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.090545
+F              2.984713
+Pr(>F)         0.084185
+Name: 1, dtype: float64, 'Feature 5': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.171614
+F              5.657031
+Pr(>F)         0.017465
+Name: 1, dtype: float64, 'Feature 6': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.326103
+F             10.749568
+Pr(>F)         0.001058
+Name: 1, dtype: float64, 'Feature 7': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.009240
+F              0.304599
+Pr(>F)         0.581066
+Name: 1, dtype: float64, 'Feature 8': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.005624
+F              0.185374
+Pr(>F)         0.666834
+Name: 1, dtype: float64, 'Feature 9': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.141521
+F              4.665074
+Pr(>F)         0.030882
+Name: 1, dtype: float64, 'Feature 10': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.101005
+F              3.329491
+Pr(>F)         0.068174
+Name: 1, dtype: float64, 'Feature 11': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.228546
+F              7.533719
+Pr(>F)         0.006101
+Name: 1, dtype: float64, 'Feature 12': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.025577
+F              0.843126
+Pr(>F)         0.358598
+Name: 1, dtype: float64, 'Feature 13': df_resid    2362.000000
+ssr           71.654488
+df_diff        1.000000
+ss_diff        0.000015
+F              0.000487
+Pr(>F)         0.982391
+Name: 1, dtype: float64}
+2024-04-17 12:48:54 DEBUG features scores: {'Feature 1': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.004385
+F              0.143365
+Pr(>F)         0.704993
+Name: 1, dtype: float64, 'Feature 2': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.013378
+F              0.437424
+Pr(>F)         0.508433
+Name: 1, dtype: float64, 'Feature 3': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.012157
+F              0.397522
+Pr(>F)         0.528433
+Name: 1, dtype: float64, 'Feature 4': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.000047
+F              0.001540
+Pr(>F)         0.968700
+Name: 1, dtype: float64, 'Feature 5': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.000721
+F              0.023579
+Pr(>F)         0.877975
+Name: 1, dtype: float64, 'Feature 6': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.171035
+F              5.592480
+Pr(>F)         0.018118
+Name: 1, dtype: float64, 'Feature 7': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.059267
+F              1.937890
+Pr(>F)         0.164029
+Name: 1, dtype: float64, 'Feature 8': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.024594
+F              0.804163
+Pr(>F)         0.369943
+Name: 1, dtype: float64, 'Feature 9': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.004145
+F              0.135536
+Pr(>F)         0.712792
+Name: 1, dtype: float64, 'Feature 10': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.243943
+F              7.976419
+Pr(>F)         0.004779
+Name: 1, dtype: float64, 'Feature 11': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.228053
+F              7.456828
+Pr(>F)         0.006367
+Name: 1, dtype: float64, 'Feature 12': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.000004
+F              0.000125
+Pr(>F)         0.991069
+Name: 1, dtype: float64, 'Feature 13': df_resid    2362.000000
+ssr           72.237156
+df_diff        1.000000
+ss_diff        0.015753
+F              0.515103
+Pr(>F)         0.473009
+Name: 1, dtype: float64}
+2024-04-17 12:48:55 DEBUG features scores: {'Feature 1': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.019255
+F              0.631072
+Pr(>F)         0.427042
+Name: 1, dtype: float64, 'Feature 2': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.048717
+F              1.596699
+Pr(>F)         0.206496
+Name: 1, dtype: float64, 'Feature 3': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.038818
+F              1.272282
+Pr(>F)         0.259454
+Name: 1, dtype: float64, 'Feature 4': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.023721
+F              0.777457
+Pr(>F)         0.378010
+Name: 1, dtype: float64, 'Feature 5': df_resid    2.361000e+03
+ssr         7.203624e+01
+df_diff     1.000000e+00
+ss_diff     6.084087e-07
+F           1.994070e-05
+Pr(>F)      9.964374e-01
+Name: 1, dtype: float64, 'Feature 6': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.254109
+F              8.328473
+Pr(>F)         0.003938
+Name: 1, dtype: float64, 'Feature 7': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.006740
+F              0.220919
+Pr(>F)         0.638384
+Name: 1, dtype: float64, 'Feature 8': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.001168
+F              0.038295
+Pr(>F)         0.844869
+Name: 1, dtype: float64, 'Feature 9': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.002699
+F              0.088473
+Pr(>F)         0.766154
+Name: 1, dtype: float64, 'Feature 10': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.292910
+F              9.600188
+Pr(>F)         0.001968
+Name: 1, dtype: float64, 'Feature 11': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.162208
+F              5.316391
+Pr(>F)         0.021212
+Name: 1, dtype: float64, 'Feature 12': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.013640
+F              0.447042
+Pr(>F)         0.503808
+Name: 1, dtype: float64, 'Feature 13': df_resid    2361.000000
+ssr           72.036239
+df_diff        1.000000
+ss_diff        0.007881
+F              0.258316
+Pr(>F)         0.611327
+Name: 1, dtype: float64}
+2024-04-17 12:48:55 DEBUG features scores: {'Feature 1': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.032566
+F              1.063324
+Pr(>F)         0.302564
+Name: 1, dtype: float64, 'Feature 2': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.001803
+F              0.058862
+Pr(>F)         0.808325
+Name: 1, dtype: float64, 'Feature 3': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.040424
+F              1.319910
+Pr(>F)         0.250725
+Name: 1, dtype: float64, 'Feature 4': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.005149
+F              0.168108
+Pr(>F)         0.681836
+Name: 1, dtype: float64, 'Feature 5': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.081877
+F              2.673409
+Pr(>F)         0.102171
+Name: 1, dtype: float64, 'Feature 6': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.095866
+F              3.130165
+Pr(>F)         0.076985
+Name: 1, dtype: float64, 'Feature 7': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.009261
+F              0.302378
+Pr(>F)         0.582447
+Name: 1, dtype: float64, 'Feature 8': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.035186
+F              1.148875
+Pr(>F)         0.283894
+Name: 1, dtype: float64, 'Feature 9': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.000037
+F              0.001204
+Pr(>F)         0.972328
+Name: 1, dtype: float64, 'Feature 10': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.048193
+F              1.573567
+Pr(>F)         0.209814
+Name: 1, dtype: float64, 'Feature 11': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.035327
+F              1.153484
+Pr(>F)         0.282931
+Name: 1, dtype: float64, 'Feature 12': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.001705
+F              0.055655
+Pr(>F)         0.813520
+Name: 1, dtype: float64, 'Feature 13': df_resid    2360.000000
+ssr           72.278539
+df_diff        1.000000
+ss_diff        0.026549
+F              0.866854
+Pr(>F)         0.351923
+Name: 1, dtype: float64}
+2024-04-17 12:48:55 DEBUG features scores: {'Feature 1': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.039176
+F              1.279967
+Pr(>F)         0.258020
+Name: 1, dtype: float64, 'Feature 2': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.030541
+F              0.997850
+Pr(>F)         0.317934
+Name: 1, dtype: float64, 'Feature 3': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.065064
+F              2.125794
+Pr(>F)         0.144971
+Name: 1, dtype: float64, 'Feature 4': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.037902
+F              1.238342
+Pr(>F)         0.265904
+Name: 1, dtype: float64, 'Feature 5': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.001942
+F              0.063436
+Pr(>F)         0.801168
+Name: 1, dtype: float64, 'Feature 6': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.124397
+F              4.064373
+Pr(>F)         0.043910
+Name: 1, dtype: float64, 'Feature 7': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.081285
+F              2.655774
+Pr(>F)         0.103308
+Name: 1, dtype: float64, 'Feature 8': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.005926
+F              0.193627
+Pr(>F)         0.659956
+Name: 1, dtype: float64, 'Feature 9': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.000166
+F              0.005437
+Pr(>F)         0.941226
+Name: 1, dtype: float64, 'Feature 10': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.142119
+F              4.643396
+Pr(>F)         0.031274
+Name: 1, dtype: float64, 'Feature 11': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.009177
+F              0.299823
+Pr(>F)         0.584045
+Name: 1, dtype: float64, 'Feature 12': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.003224
+F              0.105336
+Pr(>F)         0.745547
+Name: 1, dtype: float64, 'Feature 13': df_resid    2359.000000
+ssr           72.201350
+df_diff        1.000000
+ss_diff        0.011300
+F              0.369207
+Pr(>F)         0.543495
+Name: 1, dtype: float64}
+2024-04-17 12:48:56 DEBUG features scores: {'Feature 1': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.000001
+F              0.000040
+Pr(>F)         0.994971
+Name: 1, dtype: float64, 'Feature 2': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.090179
+F              2.955387
+Pr(>F)         0.085723
+Name: 1, dtype: float64, 'Feature 3': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.000236
+F              0.007730
+Pr(>F)         0.929947
+Name: 1, dtype: float64, 'Feature 4': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.009198
+F              0.301453
+Pr(>F)         0.583025
+Name: 1, dtype: float64, 'Feature 5': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.001371
+F              0.044935
+Pr(>F)         0.832143
+Name: 1, dtype: float64, 'Feature 6': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.001314
+F              0.043062
+Pr(>F)         0.835626
+Name: 1, dtype: float64, 'Feature 7': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.015599
+F              0.511202
+Pr(>F)         0.474690
+Name: 1, dtype: float64, 'Feature 8': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.141957
+F              4.652274
+Pr(>F)         0.031113
+Name: 1, dtype: float64, 'Feature 9': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.104399
+F              3.421412
+Pr(>F)         0.064481
+Name: 1, dtype: float64, 'Feature 10': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.289323
+F              9.481832
+Pr(>F)         0.002099
+Name: 1, dtype: float64, 'Feature 11': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.000558
+F              0.018291
+Pr(>F)         0.892429
+Name: 1, dtype: float64, 'Feature 12': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.003424
+F              0.112206
+Pr(>F)         0.737676
+Name: 1, dtype: float64, 'Feature 13': df_resid    2358.000000
+ssr           71.950547
+df_diff        1.000000
+ss_diff        0.020888
+F              0.684549
+Pr(>F)         0.408108
+Name: 1, dtype: float64}
+2024-04-17 12:48:56 DEBUG features scores: {'Feature 1': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.013626
+F              0.445442
+Pr(>F)         0.504573
+Name: 1, dtype: float64, 'Feature 2': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.000015
+F              0.000485
+Pr(>F)         0.982431
+Name: 1, dtype: float64, 'Feature 3': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.004864
+F              0.159007
+Pr(>F)         0.690108
+Name: 1, dtype: float64, 'Feature 4': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.008791
+F              0.287374
+Pr(>F)         0.591959
+Name: 1, dtype: float64, 'Feature 5': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.009763
+F              0.319170
+Pr(>F)         0.572160
+Name: 1, dtype: float64, 'Feature 6': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.033645
+F              1.099899
+Pr(>F)         0.294396
+Name: 1, dtype: float64, 'Feature 7': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.014501
+F              0.474056
+Pr(>F)         0.491195
+Name: 1, dtype: float64, 'Feature 8': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.023894
+F              0.781109
+Pr(>F)         0.376892
+Name: 1, dtype: float64, 'Feature 9': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.180498
+F              5.900634
+Pr(>F)         0.015210
+Name: 1, dtype: float64, 'Feature 10': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.131557
+F              4.300733
+Pr(>F)         0.038204
+Name: 1, dtype: float64, 'Feature 11': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.000473
+F              0.015452
+Pr(>F)         0.901084
+Name: 1, dtype: float64, 'Feature 12': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.004528
+F              0.148018
+Pr(>F)         0.700472
+Name: 1, dtype: float64, 'Feature 13': df_resid    2358.000000
+ssr           72.130159
+df_diff        1.000000
+ss_diff        0.026141
+F              0.854566
+Pr(>F)         0.355359
+Name: 1, dtype: float64}
+2024-04-17 12:48:57 DEBUG features scores: {'Feature 1': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.004651
+F              0.152001
+Pr(>F)         0.696665
+Name: 1, dtype: float64, 'Feature 2': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.049112
+F              1.605212
+Pr(>F)         0.205291
+Name: 1, dtype: float64, 'Feature 3': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.000739
+F              0.024161
+Pr(>F)         0.876489
+Name: 1, dtype: float64, 'Feature 4': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.036776
+F              1.202010
+Pr(>F)         0.273032
+Name: 1, dtype: float64, 'Feature 5': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.059107
+F              1.931885
+Pr(>F)         0.164684
+Name: 1, dtype: float64, 'Feature 6': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.196157
+F              6.411285
+Pr(>F)         0.011404
+Name: 1, dtype: float64, 'Feature 7': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.006959
+F              0.227449
+Pr(>F)         0.633466
+Name: 1, dtype: float64, 'Feature 8': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.018827
+F              0.615347
+Pr(>F)         0.432860
+Name: 1, dtype: float64, 'Feature 9': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.241491
+F              7.892997
+Pr(>F)         0.005004
+Name: 1, dtype: float64, 'Feature 10': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.337097
+F             11.017821
+Pr(>F)         0.000916
+Name: 1, dtype: float64, 'Feature 11': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.001459
+F              0.047692
+Pr(>F)         0.827148
+Name: 1, dtype: float64, 'Feature 12': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.018617
+F              0.608474
+Pr(>F)         0.435441
+Name: 1, dtype: float64, 'Feature 13': df_resid    2357.000000
+ssr           72.113796
+df_diff        1.000000
+ss_diff        0.007873
+F              0.257326
+Pr(>F)         0.612011
+Name: 1, dtype: float64}
+2024-04-17 12:48:57 DEBUG features scores: {'Feature 1': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.021607
+F              0.705096
+Pr(>F)         0.401162
+Name: 1, dtype: float64, 'Feature 2': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.006080
+F              0.198393
+Pr(>F)         0.656062
+Name: 1, dtype: float64, 'Feature 3': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.022698
+F              0.740694
+Pr(>F)         0.389526
+Name: 1, dtype: float64, 'Feature 4': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.030629
+F              0.999508
+Pr(>F)         0.317532
+Name: 1, dtype: float64, 'Feature 5': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.013541
+F              0.441865
+Pr(>F)         0.506289
+Name: 1, dtype: float64, 'Feature 6': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.030613
+F              0.998975
+Pr(>F)         0.317661
+Name: 1, dtype: float64, 'Feature 7': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.094297
+F              3.077142
+Pr(>F)         0.079530
+Name: 1, dtype: float64, 'Feature 8': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.001322
+F              0.043143
+Pr(>F)         0.835473
+Name: 1, dtype: float64, 'Feature 9': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.147667
+F              4.818736
+Pr(>F)         0.028249
+Name: 1, dtype: float64, 'Feature 10': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.116760
+F              3.810152
+Pr(>F)         0.051061
+Name: 1, dtype: float64, 'Feature 11': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.007015
+F              0.228918
+Pr(>F)         0.632372
+Name: 1, dtype: float64, 'Feature 12': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.008496
+F              0.277250
+Pr(>F)         0.598559
+Name: 1, dtype: float64, 'Feature 13': df_resid    2356.000000
+ssr           72.198014
+df_diff        1.000000
+ss_diff        0.000108
+F              0.003511
+Pr(>F)         0.952758
+Name: 1, dtype: float64}
+2024-04-17 12:48:57 DEBUG features scores: {'Feature 1': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.001006
+F              0.032791
+Pr(>F)         0.856319
+Name: 1, dtype: float64, 'Feature 2': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.000059
+F              0.001911
+Pr(>F)         0.965138
+Name: 1, dtype: float64, 'Feature 3': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.001951
+F              0.063629
+Pr(>F)         0.800872
+Name: 1, dtype: float64, 'Feature 4': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.012002
+F              0.391325
+Pr(>F)         0.531665
+Name: 1, dtype: float64, 'Feature 5': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.003869
+F              0.126137
+Pr(>F)         0.722504
+Name: 1, dtype: float64, 'Feature 6': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.013887
+F              0.452803
+Pr(>F)         0.501073
+Name: 1, dtype: float64, 'Feature 7': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.028870
+F              0.941305
+Pr(>F)         0.332042
+Name: 1, dtype: float64, 'Feature 8': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.004812
+F              0.156890
+Pr(>F)         0.692072
+Name: 1, dtype: float64, 'Feature 9': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.125228
+F              4.083137
+Pr(>F)         0.043426
+Name: 1, dtype: float64, 'Feature 10': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.136194
+F              4.440680
+Pr(>F)         0.035198
+Name: 1, dtype: float64, 'Feature 11': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.025281
+F              0.824306
+Pr(>F)         0.364017
+Name: 1, dtype: float64, 'Feature 12': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.007699
+F              0.251022
+Pr(>F)         0.616403
+Name: 1, dtype: float64, 'Feature 13': df_resid    2355.000000
+ssr           72.227049
+df_diff        1.000000
+ss_diff        0.006270
+F              0.204451
+Pr(>F)         0.651193
+Name: 1, dtype: float64}
+2024-04-17 12:48:58 DEBUG features scores: {'Feature 1': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.000439
+F              0.014290
+Pr(>F)         0.904858
+Name: 1, dtype: float64, 'Feature 2': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.001227
+F              0.039973
+Pr(>F)         0.841551
+Name: 1, dtype: float64, 'Feature 3': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.001396
+F              0.045476
+Pr(>F)         0.831150
+Name: 1, dtype: float64, 'Feature 4': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.001445
+F              0.047064
+Pr(>F)         0.828273
+Name: 1, dtype: float64, 'Feature 5': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.000020
+F              0.000651
+Pr(>F)         0.979639
+Name: 1, dtype: float64, 'Feature 6': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.008569
+F              0.279135
+Pr(>F)         0.597319
+Name: 1, dtype: float64, 'Feature 7': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.060125
+F              1.958523
+Pr(>F)         0.161803
+Name: 1, dtype: float64, 'Feature 8': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.002601
+F              0.084717
+Pr(>F)         0.771029
+Name: 1, dtype: float64, 'Feature 9': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.059233
+F              1.929472
+Pr(>F)         0.164948
+Name: 1, dtype: float64, 'Feature 10': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.035210
+F              1.146942
+Pr(>F)         0.284300
+Name: 1, dtype: float64, 'Feature 11': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.006400
+F              0.208484
+Pr(>F)         0.648000
+Name: 1, dtype: float64, 'Feature 12': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.003897
+F              0.126932
+Pr(>F)         0.721666
+Name: 1, dtype: float64, 'Feature 13': df_resid    2354.000000
+ssr           72.266200
+df_diff        1.000000
+ss_diff        0.006198
+F              0.201899
+Pr(>F)         0.653234
+Name: 1, dtype: float64}
+2024-04-17 12:48:58 DEBUG features scores: {'Feature 1': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.010924
+F              0.356488
+Pr(>F)         0.550521
+Name: 1, dtype: float64, 'Feature 2': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.003521
+F              0.114909
+Pr(>F)         0.734654
+Name: 1, dtype: float64, 'Feature 3': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.010801
+F              0.352493
+Pr(>F)         0.552762
+Name: 1, dtype: float64, 'Feature 4': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.008227
+F              0.268472
+Pr(>F)         0.604407
+Name: 1, dtype: float64, 'Feature 5': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.241642
+F              7.885790
+Pr(>F)         0.005024
+Name: 1, dtype: float64, 'Feature 6': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.030662
+F              1.000630
+Pr(>F)         0.317261
+Name: 1, dtype: float64, 'Feature 7': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.000304
+F              0.009921
+Pr(>F)         0.920665
+Name: 1, dtype: float64, 'Feature 8': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.052822
+F              1.723805
+Pr(>F)         0.189332
+Name: 1, dtype: float64, 'Feature 9': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.092519
+F              3.019291
+Pr(>F)         0.082410
+Name: 1, dtype: float64, 'Feature 10': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.088073
+F              2.874188
+Pr(>F)         0.090143
+Name: 1, dtype: float64, 'Feature 11': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.000223
+F              0.007271
+Pr(>F)         0.932053
+Name: 1, dtype: float64, 'Feature 12': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.003257
+F              0.106279
+Pr(>F)         0.744450
+Name: 1, dtype: float64, 'Feature 13': df_resid    2354.000000
+ssr           72.132926
+df_diff        1.000000
+ss_diff        0.005456
+F              0.178049
+Pr(>F)         0.673094
+Name: 1, dtype: float64}
+2024-04-17 12:48:58 DEBUG features scores: {'Feature 1': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.011010
+F              0.359336
+Pr(>F)         0.548933
+Name: 1, dtype: float64, 'Feature 2': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.000089
+F              0.002901
+Pr(>F)         0.957054
+Name: 1, dtype: float64, 'Feature 3': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.012444
+F              0.406137
+Pr(>F)         0.523999
+Name: 1, dtype: float64, 'Feature 4': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.023304
+F              0.760597
+Pr(>F)         0.383231
+Name: 1, dtype: float64, 'Feature 5': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.034517
+F              1.126550
+Pr(>F)         0.288621
+Name: 1, dtype: float64, 'Feature 6': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.012248
+F              0.399751
+Pr(>F)         0.527279
+Name: 1, dtype: float64, 'Feature 7': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.110805
+F              3.616375
+Pr(>F)         0.057335
+Name: 1, dtype: float64, 'Feature 8': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.000151
+F              0.004917
+Pr(>F)         0.944103
+Name: 1, dtype: float64, 'Feature 9': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.088900
+F              2.901463
+Pr(>F)         0.088631
+Name: 1, dtype: float64, 'Feature 10': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.177415
+F              5.790352
+Pr(>F)         0.016191
+Name: 1, dtype: float64, 'Feature 11': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.004536
+F              0.148033
+Pr(>F)         0.700457
+Name: 1, dtype: float64, 'Feature 12': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.007204
+F              0.235107
+Pr(>F)         0.627808
+Name: 1, dtype: float64, 'Feature 13': df_resid    2353.000000
+ssr           72.095194
+df_diff        1.000000
+ss_diff        0.000166
+F              0.005402
+Pr(>F)         0.941417
+Name: 1, dtype: float64}
+2024-04-17 12:48:59 DEBUG features scores: {'Feature 1': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.026264
+F              0.857621
+Pr(>F)         0.354500
+Name: 1, dtype: float64, 'Feature 2': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.029671
+F              0.968873
+Pr(>F)         0.325063
+Name: 1, dtype: float64, 'Feature 3': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.022561
+F              0.736693
+Pr(>F)         0.390810
+Name: 1, dtype: float64, 'Feature 4': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.000440
+F              0.014380
+Pr(>F)         0.904558
+Name: 1, dtype: float64, 'Feature 5': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.016667
+F              0.544228
+Pr(>F)         0.460759
+Name: 1, dtype: float64, 'Feature 6': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.040273
+F              1.315055
+Pr(>F)         0.251598
+Name: 1, dtype: float64, 'Feature 7': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.001651
+F              0.053905
+Pr(>F)         0.816423
+Name: 1, dtype: float64, 'Feature 8': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.009393
+F              0.306704
+Pr(>F)         0.579763
+Name: 1, dtype: float64, 'Feature 9': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.065928
+F              2.152781
+Pr(>F)         0.142446
+Name: 1, dtype: float64, 'Feature 10': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.018631
+F              0.608380
+Pr(>F)         0.435477
+Name: 1, dtype: float64, 'Feature 11': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.000521
+F              0.017004
+Pr(>F)         0.896263
+Name: 1, dtype: float64, 'Feature 12': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.001726
+F              0.056359
+Pr(>F)         0.812367
+Name: 1, dtype: float64, 'Feature 13': df_resid    2352.000000
+ssr           72.028595
+df_diff        1.000000
+ss_diff        0.010162
+F              0.331830
+Pr(>F)         0.564639
+Name: 1, dtype: float64}
+2024-04-17 12:48:59 DEBUG features scores: {'Feature 1': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.005113
+F              0.167160
+Pr(>F)         0.682686
+Name: 1, dtype: float64, 'Feature 2': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.092821
+F              3.034653
+Pr(>F)         0.081635
+Name: 1, dtype: float64, 'Feature 3': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.001779
+F              0.058146
+Pr(>F)         0.809471
+Name: 1, dtype: float64, 'Feature 4': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.000322
+F              0.010520
+Pr(>F)         0.918317
+Name: 1, dtype: float64, 'Feature 5': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.006459
+F              0.211175
+Pr(>F)         0.645891
+Name: 1, dtype: float64, 'Feature 6': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.094165
+F              3.078605
+Pr(>F)         0.079459
+Name: 1, dtype: float64, 'Feature 7': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.008515
+F              0.278391
+Pr(>F)         0.597807
+Name: 1, dtype: float64, 'Feature 8': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.000214
+F              0.006987
+Pr(>F)         0.933392
+Name: 1, dtype: float64, 'Feature 9': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.085171
+F              2.784574
+Pr(>F)         0.095309
+Name: 1, dtype: float64, 'Feature 10': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.000148
+F              0.004836
+Pr(>F)         0.944564
+Name: 1, dtype: float64, 'Feature 11': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.009537
+F              0.311790
+Pr(>F)         0.576637
+Name: 1, dtype: float64, 'Feature 12': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.000241
+F              0.007863
+Pr(>F)         0.929348
+Name: 1, dtype: float64, 'Feature 13': df_resid    2351.000000
+ssr           71.909780
+df_diff        1.000000
+ss_diff        0.000551
+F              0.018004
+Pr(>F)         0.893272
+Name: 1, dtype: float64}
+2024-04-17 12:48:59 DEBUG features scores: {'Feature 1': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.047485
+F              1.559210
+Pr(>F)         0.211905
+Name: 1, dtype: float64, 'Feature 2': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.161858
+F              5.314713
+Pr(>F)         0.021233
+Name: 1, dtype: float64, 'Feature 3': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.043854
+F              1.439974
+Pr(>F)         0.230264
+Name: 1, dtype: float64, 'Feature 4': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.096113
+F              3.155948
+Pr(>F)         0.075780
+Name: 1, dtype: float64, 'Feature 5': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.000043
+F              0.001414
+Pr(>F)         0.970003
+Name: 1, dtype: float64, 'Feature 6': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.050321
+F              1.652323
+Pr(>F)         0.198770
+Name: 1, dtype: float64, 'Feature 7': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.091038
+F              2.989297
+Pr(>F)         0.083948
+Name: 1, dtype: float64, 'Feature 8': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.011392
+F              0.374072
+Pr(>F)         0.540852
+Name: 1, dtype: float64, 'Feature 9': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.163954
+F              5.383527
+Pr(>F)         0.020413
+Name: 1, dtype: float64, 'Feature 10': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.015818
+F              0.519409
+Pr(>F)         0.471166
+Name: 1, dtype: float64, 'Feature 11': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.004734
+F              0.155444
+Pr(>F)         0.693422
+Name: 1, dtype: float64, 'Feature 12': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.189523
+F              6.223100
+Pr(>F)         0.012678
+Name: 1, dtype: float64, 'Feature 13': df_resid    2350.000000
+ssr           71.568532
+df_diff        1.000000
+ss_diff        0.020737
+F              0.680929
+Pr(>F)         0.409351
+Name: 1, dtype: float64}
+2024-04-17 12:49:00 DEBUG features scores: {'Feature 1': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.007136
+F              0.233293
+Pr(>F)         0.629138
+Name: 1, dtype: float64, 'Feature 2': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.014251
+F              0.465881
+Pr(>F)         0.494956
+Name: 1, dtype: float64, 'Feature 3': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.003493
+F              0.114172
+Pr(>F)         0.735473
+Name: 1, dtype: float64, 'Feature 4': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.001857
+F              0.060710
+Pr(>F)         0.805399
+Name: 1, dtype: float64, 'Feature 5': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.000040
+F              0.001324
+Pr(>F)         0.970981
+Name: 1, dtype: float64, 'Feature 6': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.000762
+F              0.024907
+Pr(>F)         0.874613
+Name: 1, dtype: float64, 'Feature 7': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.023814
+F              0.778494
+Pr(>F)         0.377692
+Name: 1, dtype: float64, 'Feature 8': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.042676
+F              1.395072
+Pr(>F)         0.237670
+Name: 1, dtype: float64, 'Feature 9': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.076054
+F              2.486207
+Pr(>F)         0.114983
+Name: 1, dtype: float64, 'Feature 10': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.055364
+F              1.809859
+Pr(>F)         0.178655
+Name: 1, dtype: float64, 'Feature 11': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.005837
+F              0.190822
+Pr(>F)         0.662274
+Name: 1, dtype: float64, 'Feature 12': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.003449
+F              0.112734
+Pr(>F)         0.737083
+Name: 1, dtype: float64, 'Feature 13': df_resid    2350.000000
+ssr           71.886920
+df_diff        1.000000
+ss_diff        0.000139
+F              0.004549
+Pr(>F)         0.946232
+Name: 1, dtype: float64}
+2024-04-17 12:49:00 DEBUG features scores: {'Feature 1': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.026352
+F              0.863882
+Pr(>F)         0.352750
+Name: 1, dtype: float64, 'Feature 2': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.017986
+F              0.589615
+Pr(>F)         0.442645
+Name: 1, dtype: float64, 'Feature 3': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.026714
+F              0.875775
+Pr(>F)         0.349458
+Name: 1, dtype: float64, 'Feature 4': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.002029
+F              0.066524
+Pr(>F)         0.796490
+Name: 1, dtype: float64, 'Feature 5': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.267828
+F              8.780160
+Pr(>F)         0.003076
+Name: 1, dtype: float64, 'Feature 6': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.037671
+F              1.234952
+Pr(>F)         0.266560
+Name: 1, dtype: float64, 'Feature 7': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.127500
+F              4.179807
+Pr(>F)         0.041020
+Name: 1, dtype: float64, 'Feature 8': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.004881
+F              0.160000
+Pr(>F)         0.689193
+Name: 1, dtype: float64, 'Feature 9': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.122913
+F              4.029444
+Pr(>F)         0.044827
+Name: 1, dtype: float64, 'Feature 10': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.001005
+F              0.032954
+Pr(>F)         0.855966
+Name: 1, dtype: float64, 'Feature 11': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.000565
+F              0.018522
+Pr(>F)         0.891757
+Name: 1, dtype: float64, 'Feature 12': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.029147
+F              0.955529
+Pr(>F)         0.328416
+Name: 1, dtype: float64, 'Feature 13': df_resid    2349.000000
+ssr           71.653440
+df_diff        1.000000
+ss_diff        0.029179
+F              0.956579
+Pr(>F)         0.328151
+Name: 1, dtype: float64}
+2024-04-17 12:49:00 DEBUG features scores: {'Feature 1': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.020910
+F              0.682647
+Pr(>F)         0.408761
+Name: 1, dtype: float64, 'Feature 2': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.000112
+F              0.003642
+Pr(>F)         0.951881
+Name: 1, dtype: float64, 'Feature 3': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.032272
+F              1.053578
+Pr(>F)         0.304790
+Name: 1, dtype: float64, 'Feature 4': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.016552
+F              0.540355
+Pr(>F)         0.462359
+Name: 1, dtype: float64, 'Feature 5': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.004379
+F              0.142968
+Pr(>F)         0.705382
+Name: 1, dtype: float64, 'Feature 6': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.201244
+F              6.569888
+Pr(>F)         0.010434
+Name: 1, dtype: float64, 'Feature 7': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.006378
+F              0.208206
+Pr(>F)         0.648219
+Name: 1, dtype: float64, 'Feature 8': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.005499
+F              0.179518
+Pr(>F)         0.671827
+Name: 1, dtype: float64, 'Feature 9': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.187344
+F              6.116106
+Pr(>F)         0.013466
+Name: 1, dtype: float64, 'Feature 10': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.076963
+F              2.512550
+Pr(>F)         0.113078
+Name: 1, dtype: float64, 'Feature 11': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.000512
+F              0.016713
+Pr(>F)         0.897148
+Name: 1, dtype: float64, 'Feature 12': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.016251
+F              0.530547
+Pr(>F)         0.466450
+Name: 1, dtype: float64, 'Feature 13': df_resid    2348.000000
+ssr           71.922350
+df_diff        1.000000
+ss_diff        0.014441
+F              0.471455
+Pr(>F)         0.492386
+Name: 1, dtype: float64}
+2024-04-17 12:49:01 DEBUG features scores: {'Feature 1': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.004931
+F              0.160541
+Pr(>F)         0.688695
+Name: 1, dtype: float64, 'Feature 2': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.009246
+F              0.301033
+Pr(>F)         0.583287
+Name: 1, dtype: float64, 'Feature 3': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.005588
+F              0.181930
+Pr(>F)         0.669759
+Name: 1, dtype: float64, 'Feature 4': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.011707
+F              0.381152
+Pr(>F)         0.537047
+Name: 1, dtype: float64, 'Feature 5': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.015987
+F              0.520512
+Pr(>F)         0.470695
+Name: 1, dtype: float64, 'Feature 6': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.003820
+F              0.124378
+Pr(>F)         0.724366
+Name: 1, dtype: float64, 'Feature 7': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.019082
+F              0.621288
+Pr(>F)         0.430648
+Name: 1, dtype: float64, 'Feature 8': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.008254
+F              0.268739
+Pr(>F)         0.604228
+Name: 1, dtype: float64, 'Feature 9': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.033950
+F              1.105362
+Pr(>F)         0.293201
+Name: 1, dtype: float64, 'Feature 10': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.020641
+F              0.672032
+Pr(>F)         0.412427
+Name: 1, dtype: float64, 'Feature 11': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.009799
+F              0.319055
+Pr(>F)         0.572230
+Name: 1, dtype: float64, 'Feature 12': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.004788
+F              0.155887
+Pr(>F)         0.693007
+Name: 1, dtype: float64, 'Feature 13': df_resid    2347.000000
+ssr           72.085805
+df_diff        1.000000
+ss_diff        0.001239
+F              0.040333
+Pr(>F)         0.840848
+Name: 1, dtype: float64}
+2024-04-17 12:49:01 DEBUG features scores: {'Feature 1': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.038105
+F              1.243023
+Pr(>F)         0.265003
+Name: 1, dtype: float64, 'Feature 2': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.169512
+F              5.529595
+Pr(>F)         0.018780
+Name: 1, dtype: float64, 'Feature 3': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.037553
+F              1.225004
+Pr(>F)         0.268494
+Name: 1, dtype: float64, 'Feature 4': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.100370
+F              3.274143
+Pr(>F)         0.070508
+Name: 1, dtype: float64, 'Feature 5': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.032769
+F              1.068955
+Pr(>F)         0.301288
+Name: 1, dtype: float64, 'Feature 6': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.000486
+F              0.015853
+Pr(>F)         0.899814
+Name: 1, dtype: float64, 'Feature 7': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.043947
+F              1.433569
+Pr(>F)         0.231304
+Name: 1, dtype: float64, 'Feature 8': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.011094
+F              0.361900
+Pr(>F)         0.547511
+Name: 1, dtype: float64, 'Feature 9': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.000096
+F              0.003128
+Pr(>F)         0.955400
+Name: 1, dtype: float64, 'Feature 10': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.041902
+F              1.366881
+Pr(>F)         0.242467
+Name: 1, dtype: float64, 'Feature 11': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.003891
+F              0.126930
+Pr(>F)         0.721668
+Name: 1, dtype: float64, 'Feature 12': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.059718
+F              1.948035
+Pr(>F)         0.162931
+Name: 1, dtype: float64, 'Feature 13': df_resid    2346.000000
+ssr           71.917623
+df_diff        1.000000
+ss_diff        0.024111
+F              0.786519
+Pr(>F)         0.375246
+Name: 1, dtype: float64}

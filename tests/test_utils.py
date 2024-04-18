@@ -8,3 +8,4 @@ def test_train_test_split_time_series() -> None:
     isDataCorrect = data_train.shape == (70,16) and data_test.shape == (30,16)
     isTargetCorrect = target_train.shape == (70,) and target_test.shape == (30,)
     assert isDataCorrect and isTargetCorrect
+

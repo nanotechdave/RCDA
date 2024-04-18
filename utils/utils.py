@@ -6,6 +6,9 @@ from sklearn.metrics import make_scorer
 from sklearn.linear_model import LinearRegression, Ridge
 from mlxtend.feature_selection import SequentialFeatureSelector
 from modules.memorycapacity import memorycapacity
+from statsmodels.regression.linear_model import OLS
+from statsmodels.tools import add_constant
+from statsmodels.stats.anova import anova_lm
 
 def find_specific_txt_files(folder_path: str) -> list:
     """
@@ -75,6 +78,28 @@ def sequential_regression_evaluate(states_train: np.array, states_test: np.array
 
     linear_regressor.fit(X_train_selected, target_train)
     return linear_regressor.predict(X_test_selected)
+
+def ftest_evaluate(states_train: np.array, states_test: np.array, target_train:np.array):
+    model = LinearRegression().fit(states_train, target_train)
+
+    # Use statsmodels for F-test
+    results = {}
+    for i in range(0, states_train.shape[1]):  # Start at 1 to skip the intercept
+        results[f'Feature {i}'] = test_feature_relevance(states_train, target_train, i)
+    return results
+
+
+def test_feature_relevance(X, y, feature_index):
+    # Model with all features except the one being tested
+    baseline_features = np.delete(X, feature_index, axis=1)
+    baseline_model = OLS(y, baseline_features).fit()
+
+    # Full model with the feature being tested
+    full_model = OLS(y, X).fit()
+
+    # F-test to compare models
+    anova_results = anova_lm(baseline_model, full_model)
+    return anova_results.iloc[1] 
 
 def extract_voltage_matrix(df: pd.DataFrame) -> np.array:
     """

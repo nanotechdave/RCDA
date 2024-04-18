@@ -3,8 +3,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import utils.utils as ut
+import logging
 
-
+logging.basicConfig(
+        level = logging.DEBUG,
+        format = "%(asctime)s %(levelname)s %(message)s",
+        datefmt = "%Y-%m-%d %H:%M:%S",
+        filename = "basic.log",
+    )
 
 def calculate_memory_capacity(estimated_waveforms: list[np.array], target_waveforms: list[np.array]) -> float:
     """
@@ -134,6 +140,13 @@ def calculate_mc_from_df(measurement:pd.DataFrame , elec_dict:dict, model:str = 
                 prediction_test = ut.sequential_regression_evaluate(states_train, states_test, target_train)
             elif model.lower() == "ridge":
                 prediction_test = ut.ridge_regression_predict(states_train, states_test, target_train, alpha = 1.0)
+            """ if True == True:
+                print(f"states shape: {states_train.shape[1]}")
+                features_score = ut.ftest_evaluate(states_train, states_test, target_train) 
+                for key in features_score.keys():
+                    series = features_score[key]
+                    print(f"{key}: {series['F']}") """
+
 
             # arrays must be flattened from [[1],[2],[3]] to [1,2,3]
             prediction_test = np.array(prediction_test).flatten()
@@ -162,8 +175,8 @@ def delayWaveforms(bias_voltage:np.array, float_voltage:list[np.array] , gnd_vol
     return bias_voltage, float_voltage, gnd_voltage
 
 
-"""
-path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad130M/"
+
+""" path = "/Users/davidepilati/Library/CloudStorage/OneDrive-PolitecnicodiTorino/PhD/Misure/InrimARC/NWN_Pad130M/"
 filename = "011_INRiMARC_NWN_Pad130M_gridSE_MemoryCapacity_2024_03_28.txt"
 filepath = path+filename
 
@@ -174,4 +187,7 @@ measurement, electrode_status = read_and_parse_to_df(filepath)
 active_electrode_analysis(measurement, electrode_status, calculate_mc_from_file(filepath), 30)
 print(calculate_mc_from_file(filepath))
 print(read_and_parse_to_df(filepath)[1])"""
-#print(folder_analysis_MC(path))
+#print(folder_analysis_MC(path)) """
+
+
+
