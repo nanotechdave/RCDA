@@ -113,6 +113,36 @@ def folder_analysis_MC(path: str):
         MC_vec.append(MC_val)
     return MC_vec
 
+def ftest_from_matrices(input: np.array, voltages: list[np.array], model:str = "linear", kdelay:int = 2):
+    bias_voltage = input
+    float_voltage = voltages
+    target_vec = []
+    estimated_vec = []
+    gnd_voltage = input # fake, only for delay compatibility
+    elec_scores = np.zeros(len(float_voltage[0]))
+    print(f"len voltages: {len(voltages)}")
+    print(f"len voltages[0]: {len(voltages[0])}")
+    for k in range(kdelay):
+        print(f"k: {k}")
+        if k!=0:
+            # construct the delayed waveform
+            bias_voltage_del, float_voltage_del, gnd_voltage_del = delayWaveforms(bias_voltage, float_voltage, gnd_voltage, k)
+            #divide test and train set
+            states_train, states_test, target_train, target_test = ut.train_test_split_time_series(
+                        float_voltage_del,
+                        bias_voltage_del,
+                        test_size=0.2,
+                        )
+            # train model
+            features_score = ut.ftest_evaluate(states_train, states_test, target_train)
+            
+            for idx, key in enumerate(features_score.keys()):
+                score_series = features_score[key]
+                elec_scores[idx] += score_series["F"]  
+    return elec_scores
+
+
+
 def calculate_mc_from_df(measurement:pd.DataFrame , elec_dict:dict, model:str = "linear", kdelay:int = 30, bias_elec:str = "08", gnd_elec:str = "17"):
     # fetch data into a measurement dataframe and an electrode role dictionary
     bias_voltage = []

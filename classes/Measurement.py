@@ -30,6 +30,8 @@ class Measurement():
 
         # fill matrices for ease of computation
         bias_voltage, gnd_voltage, float_voltage = ut.fillVoltageMatFromDf(self.data, self.elec)
+        print(f"len voltages: {len(float_voltage)}")
+        print(f"len voltages[0]: {len(float_voltage[0])}")
         for idx in range(len(self.elec["float"])):
             self.elec_scores[idx] = 0
 
@@ -43,7 +45,9 @@ class Measurement():
                             bias_voltage_del,
                             test_size=0.2,
                             )
+                
                 features_score = ut.ftest_evaluate(states_train, states_test, target_train) 
+                print(features_score)
                 for idx, key in enumerate(features_score.keys()):
                     score_series = features_score[key]
                     self.elec_scores[idx] += score_series["F"]                     

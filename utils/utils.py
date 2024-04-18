@@ -61,6 +61,101 @@ def ridge_regression_predict(states_train: np.array, states_test: np.array, targ
     ridge_reg.fit(states_train, target_train)
     return ridge_reg.predict(states_test)
 
+def reshape_into_matrix(voltage_differences, electrode_pairs, size):
+    """
+    Reshapes lists of voltage differences and electrode pairs back into a matrix,
+    filling the upper triangular part of the matrix.
+
+    Args:
+    voltage_differences (list of numpy arrays): List of arrays containing the voltage differences.
+    electrode_pairs (list of tuples): List of tuples containing the electrode pairs.
+    size (int): The dimension of the NxN matrix to be filled.
+
+    Returns:
+    numpy.ndarray: A 2D array of tuples, where each tuple contains a vector of voltage
+                   differences and a tuple of electrode indices, filling the upper
+                   triangular part of the matrix.
+    """
+    # Initialize an empty matrix of tuples
+    matrix = np.empty((size, size), dtype=object)
+
+    # Fill the matrix with empty data where no values will be placed (optional)
+    for i in range(size):
+        for j in range(size):
+            matrix[i, j] = (np.array([]), (i, j))
+
+    # Populate the upper triangular matrix
+    for diff, pair in zip(voltage_differences, electrode_pairs):
+        i, j = pair
+        matrix[i, j] = (diff, (i, j))
+
+    return matrix
+
+def compute_voltage_differences(voltage_matrix):
+    """
+    Computes a matrix where each cell contains a tuple with the vector of voltage 
+    differences between electrode pairs and the tuple of their indices.
+
+    Args:
+    voltage_matrix (numpy.ndarray): A 2D array where each column represents an electrode
+                                    and each row represents a timestep.
+
+    Returns:
+    numpy.ndarray: A 2D array where each element (i, j) is a tuple. The first element
+                   of the tuple is the vector of voltage differences between electrode i 
+                   and electrode j across timesteps, and the second element is the tuple 
+                   (i, j) indicating the electrode indices.
+    """
+    # Ensure the input is a NumPy array
+    voltage_matrix = np.array(voltage_matrix)
+    
+    # Number of electrodes
+    num_electrodes = voltage_matrix.shape[1]
+    
+    # Initialize an empty array to store the tuples
+    # Note: We need an object array to store tuples
+    voltage_differences = np.empty((num_electrodes, num_electrodes), dtype=object)
+
+    # Compute the differences and store them with electrode indices
+    for i in range(num_electrodes):
+        for j in range(num_electrodes):
+            diff_vector = voltage_matrix[:, i] - voltage_matrix[:, j]
+            voltage_differences[i, j] = (diff_vector, (i, j))
+
+    return voltage_differences
+
+
+def extract_upper_triangular_data(matrix):
+    """
+    Extracts voltage difference vectors and electrode pairs from the upper triangular
+    part of the matrix (excluding the diagonal).
+
+    Args:
+    matrix (numpy.ndarray): A 2D array of tuples, where each tuple contains a vector
+                            of voltage differences and a tuple of electrode indices.
+
+    Returns:
+    tuple: (list of numpy arrays, list of tuples)
+           First element is a list of arrays containing the voltage differences.
+           Second element is a list of tuples containing the electrode pairs.
+    """
+    # Number of electrodes (assuming a square matrix)
+    size = matrix.shape[0]
+
+    # Lists to store the results
+    voltage_differences = []
+    electrode_pairs = []
+
+    # Traverse only the upper triangular part, excluding the diagonal
+    for i in range(size):
+        for j in range(i + 1, size):
+            data = matrix[i, j]
+            voltage_differences.append(data[0])  # Append the voltage difference vector
+            electrode_pairs.append(data[1])      # Append the tuple of electrode indices
+
+    return voltage_differences, electrode_pairs
+
+
 def sequential_regression_evaluate(states_train: np.array, states_test: np.array, target_train:np.array):
     linear_regressor = LinearRegression()
     
